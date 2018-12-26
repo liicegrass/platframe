@@ -1,0 +1,174 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{AABD2A42-6291-4D33-8E99-E30101CB9F8B}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>HJY.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vcl;rtl;vclx;vclimg;vclactnband;dbrtl;vcldb;vcldbx;bdertl;vcltouch;xmlrtl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;tmsd2010;tmsexd2010;tmswizd2010;tmsxlsd2010;dacvcl140;dac140;unidacvcl140;unidac140;frxe14;frxADO14;frxDB14;frx14;fs14;fsADO14;EmbeddedWebBrowser_D2010;CnPack_D2010;frxcs14;VirtualTreesR;YQImageD;RaizeComponentsVcl;RaizeComponentsVclDb;DCEF_D2010;dxCoreRS14;cxLibraryRS14;dxGDIPlusRS14;dxThemeRS14;dxServerModeRS14;cxDataRS14;dxOfficeCoreRS14;cxEditorsRS14;cxPageControlRS14;dxSpreadSheetRS14;dxSpreadSheetCoreDialogsRS14;dxSpreadSheetCoreRS14;dxWizardControlRS14;cxGridRS14;cxExportRS14;dxLayoutControlRS14;cxPivotGridRS14;dxmdsRS14;dxBarRS14;dxComnRS14;dxRibbonRS14;cxSchedulerRS14;dxSkinsCoreRS14;dxPSCoreRS14;dxPSTeeChartRS14;dxorgcRS14;dxPSdxLCLnkRS14;cxTreeListRS14;cxPivotGridOLAPRS14;cxPivotGridChartRS14;dxHttpIndyRequestRS14;dxADOServerModeRS14;dxDBXServerModeRS14;dxSpreadSheetCoreConditionalFormattingDialogsRS14;dxDockingRS14;dxNavBarRS14;dxtrmdRS14;dxdbtrRS14;cxVerticalGridRS14;cxSchedulerRibbonStyleEventEditorRS14;cxSchedulerTreeBrowserRS14;cxSchedulerGridRS14;dxRibbonCustomizationFormRS14;dxTabbedMDIRS14;dxBarExtItemsRS14;dxBarExtDBItemsRS14;dxBarDBNavRS14;dxPScxPCProdRS14;dxPSDBTeeChartRS14;dxPScxExtCommonRS14;dxPScxCommonRS14;dxPSLnksRS14;dxPsPrVwAdvRS14;dxPSPrVwRibbonRS14;dxSpellCheckerRS14;dxFlowChartRS14;dxdborRS14;dxTileControlRS14;dxGaugeControlRS14;dxMapControlRS14;dxPDFViewerRS14;dxSpreadSheetConditionalFormattingDialogsRS14;cxTreeListdxBarPopupMenuRS14;dxPSdxSpreadSheetLnkRS14;dxPScxGridLnkRS14;dxPScxPivotGridLnkRS14;dxPScxSchedulerLnkRS14;dxPScxTLLnkRS14;dxPScxVGridLnkRS14;dxPSdxOCLnkRS14;dxPSdxDBOCLnkRS14;dxPSdxDBTVLnkRS14;dxPSdxFCLnkRS14;dxPSdxGaugeControlLnkRS14;dxPSdxMapControlLnkRS14;HJYRemote;MlSkinVCLD2010</DCC_UsePackage>
+			<DCC_UnitSearchPath>..\..\lib;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_ExeOutput>..\..\bin\</DCC_ExeOutput>
+			<DCC_DcuOutput>..\..\lib</DCC_DcuOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_DependencyCheckOutputName>..\..\bin\HJY.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="HJY.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="HJYSysInit.pas"/>
+			<DCCReference Include="UFrmMain.pas">
+				<Form>FrmMain</Form>
+			</DCCReference>
+			<DCCReference Include="UFrmLogin.pas">
+				<Form>FrmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="UFrmAbout.pas">
+				<Form>FrmAbout</Form>
+			</DCCReference>
+			<DCCReference Include="UFrmPassEdit.pas">
+				<Form>FrmPassEdit</Form>
+			</DCCReference>
+			<DCCReference Include="UFrmRightInfo.pas">
+				<Form>FrmRightInfo</Form>
+			</DCCReference>
+			<DCCReference Include="UDmMain.pas">
+				<Form>DmMain</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UFrmDiaog.pas">
+				<Form>FrmDiaog</Form>
+			</DCCReference>
+			<DCCReference Include="..\Core\UFrmRoot.pas">
+				<Form>FrmRoot</Form>
+			</DCCReference>
+			<DCCReference Include="..\Core\UDmImage.pas">
+				<Form>DmImage</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\Core\UFrmBar.pas">
+				<Form>FrmBar</Form>
+			</DCCReference>
+			<DCCReference Include="..\Core\UFrmCustomDBBandedTable.pas">
+				<Form>FrmCustomDBBandedTable</Form>
+			</DCCReference>
+			<DCCReference Include="..\Core\UFrmCustomDBTreeList.pas">
+				<Form>FrmCustomDBTreeList</Form>
+			</DCCReference>
+			<DCCReference Include="..\Core\UFrmGrid.pas">
+				<Form>FrmGrid</Form>
+			</DCCReference>
+			<DCCReference Include="..\Core\UFrmModal.pas">
+				<Form>FrmModal</Form>
+			</DCCReference>
+			<DCCReference Include="..\Core\Common\CnAES.pas"/>
+			<DCCReference Include="..\Core\Common\CnMD5.pas"/>
+			<DCCReference Include="..\Core\Common\HJYClassHelper.pas"/>
+			<DCCReference Include="..\Core\Common\HJYConsts.pas"/>
+			<DCCReference Include="..\Core\Common\HJYCryptors.pas"/>
+			<DCCReference Include="..\Core\Common\HJYDataProviders.pas"/>
+			<DCCReference Include="..\Core\Common\HJYDataRecords.pas"/>
+			<DCCReference Include="..\Core\Common\HJYDBAccesses.pas"/>
+			<DCCReference Include="..\Core\Common\HJYDBUtils.pas"/>
+			<DCCReference Include="..\Core\Common\HJYDialogs.pas"/>
+			<DCCReference Include="..\Core\Common\HJYForms.pas"/>
+			<DCCReference Include="..\Core\Common\HJYStoreProcParams.pas"/>
+			<DCCReference Include="..\Core\Common\HJYThreads.pas"/>
+			<DCCReference Include="..\Core\Common\HJYUserInfos.pas"/>
+			<DCCReference Include="..\Core\Common\HJYUtils.pas"/>
+			<DCCReference Include="..\Core\Common\HJYValidationChecks.pas"/>
+			<DCCReference Include="..\Core\Common\HJYVersionInfos.pas"/>
+			<DCCReference Include="..\Core\Common\sevenzip.pas"/>
+			<DCCReference Include="..\Core\Common\superobject.pas"/>
+			<DCCReference Include="..\Core\Common\UniDBAccessesImpl.pas"/>
+			<DCCReference Include="..\Core\Common\HJYLoggers.pas"/>
+			<DCCReference Include="..\Core\Common\HJYSyncObjs.pas"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">HJY.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">1</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">2052</VersionInfo>
+						<VersionInfo Name="CodePage">936</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription">客户端开发基础框架</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.0.0.1</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright">版权所有 (C)2014-2015</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">客户端开发基础框架</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\samplevisualizers140.bpl">Embarcadero Sample Debugger Visualizers</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

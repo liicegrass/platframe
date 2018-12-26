@@ -1,0 +1,95 @@
+package DSCore;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  rtl,
+  dbrtl,
+  IndyCore,
+  IndySystem,
+  IndyProtocols,
+  dsnap,
+  vclimg,
+  adortl,
+  dxCoreRS14,
+  cxLibraryRS14,
+  dxGDIPlusRS14,
+  dxThemeRS14,
+  cxDataRS14,
+  dxOfficeCoreRS14,
+  cxEditorsRS14,
+  cxPageControlRS14,
+  dxLayoutControlRS14,
+  dxComnRS14,
+  dxSpreadSheetRS14,
+  cxGridRS14,
+  cxExportRS14,
+  cxTreeListRS14,
+  dxBarRS14,
+  dxSkinsCoreRS14,
+  cxTreeListdxBarPopupMenuRS14,
+  dxBarExtItemsRS14,
+  dxNavBarRS14,
+  dxSpreadSheetCoreConditionalFormattingDialogsRS14;
+
+contains
+  CnAES in 'Common\CnAES.pas',
+  CnMD5 in 'Common\CnMD5.pas',
+  HJYConsts in 'Common\HJYConsts.pas',
+  HJYCryptors in 'Common\HJYCryptors.pas',
+  HJYDataExports in 'Common\HJYDataExports.pas',
+  HJYDataProviders in 'Common\HJYDataProviders.pas',
+  HJYDataRecords in 'Common\HJYDataRecords.pas',
+  HJYDBUtils in 'Common\HJYDBUtils.pas',
+  HJYDialogs in 'Common\HJYDialogs.pas',
+  HJYForms in 'Common\HJYForms.pas',
+  HJYHttps in 'Common\HJYHttps.pas',
+  HJYLogs in 'Common\HJYLogs.pas',
+  HJYStoreProcParams in 'Common\HJYStoreProcParams.pas',
+  HJYThreads in 'Common\HJYThreads.pas',
+  HJYUserInfos in 'Common\HJYUserInfos.pas',
+  HJYUtils in 'Common\HJYUtils.pas',
+  HJYValidationChecks in 'Common\HJYValidationChecks.pas',
+  HJYVersionInfos in 'Common\HJYVersionInfos.pas',
+  HttpDBAccessesImpl in 'Common\HttpDBAccessesImpl.pas',
+  sevenzip in 'Common\sevenzip.pas',
+  superobject in 'Common\superobject.pas',
+  UDmImage in 'Inherited\UDmImage.pas' {DmImage: TDataModule},
+  UFrmBar in 'Inherited\UFrmBar.pas' {FrmBar},
+  UFrmCustomDBBandedTable in 'Inherited\UFrmCustomDBBandedTable.pas' {FrmCustomDBBandedTable},
+  UFrmCustomDBTreeList in 'Inherited\UFrmCustomDBTreeList.pas' {FrmCustomDBTreeList},
+  UFrmGrid in 'Inherited\UFrmGrid.pas' {FrmGrid},
+  UFrmModal in 'Inherited\UFrmModal.pas' {FrmModal},
+  UFrmRoot in 'Inherited\UFrmRoot.pas' {FrmRoot},
+  HJYDBAccesses in 'Common\HJYDBAccesses.pas',
+  HJYClassHelper in 'Common\HJYClassHelper.pas',
+  UFrmHttpSend in 'Common\UFrmHttpSend.pas' {FrmHttpSend},
+  HJYUpgrade in 'Common\HJYUpgrade.pas',
+  UFrmMemoEdit in 'UFrmMemoEdit.pas' {FrmMemoEdit};
+
+end.
+
+
